@@ -150,7 +150,7 @@ class BatchGenerator(Sequence):
 
 def load_data_generators(batch_size, emdim, max_passage_length=None, max_query_length=None, shuffle=False):
     train_generator = BatchGenerator("train", batch_size, emdim, max_passage_length, max_query_length, shuffle)
-    validation_generator = BatchGenerator("validation", batch_size, emdim, max_passage_length, max_query_length, shuffle)
+    validation_generator = BatchGenerator("train", batch_size, emdim, max_passage_length, max_query_length, shuffle)
 
     return train_generator, validation_generator
 
@@ -955,9 +955,9 @@ decoder_dropout = 0.0
 
 batch_size = 1
 shuffle_samples = False
-steps_per_epochs = 2000
-epochs = 500
-validation_steps = None
+steps_per_epochs = 100
+epochs = 5000
+validation_steps = 1
 workers = 1
 use_multiprocessing = False
 shuffle_batch = False
