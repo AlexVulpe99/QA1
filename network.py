@@ -955,7 +955,7 @@ decoder_dropout = 0.0
 
 batch_size = 1
 shuffle_samples = False
-steps_per_epochs = 2
+steps_per_epochs = 1
 epochs = 500
 validation_steps = None
 workers = 1
